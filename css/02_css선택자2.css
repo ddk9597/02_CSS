@@ -11,25 +11,25 @@ code{
 
     /* ------- 기본 속성 선택자 --------- */
 
-    /* div 태그 중 name 속성 값이 "name-1"인 요소에 배경색 green */
+    /* div 태그 > 속성명 name > 속성값 "name-1"인 요소에 배경색 green */
     /* 선택자[속성명="속성값"] { CSS 코드; } */
 
     div[name="name-1"] { background-color: green;}
     
-    /* div 태그 중 name 속성의 값이 "name-2"인 요소만 배경색 yellow */
+    /* div 태그 > 속성명 name > 속성값 "name-2"인 요소만 배경색 yellow */
     div[name="name-2"] {background-color: greenyellow;}
 
     /* 모든 div 요소의 글자 색을 흰색으로 */
     div{color: gray;}
 
-    /* p태그 중 data 속성의 값이 "data-1"인 요소만 배경색 red */
+    /* p태그 > 속성명 data > 속성값 "data-1"인 요소 배경색 red */
     p[data="data-1"] { background-color: red;}
 
     /* 내용이 p3, p4인 요소를 선택해 배경색 blue */
     p[data="data-2"] { background-color: blue;}
 
     /* div1, div2. p2, p3의 font-size : 50px */
-    /* 모든 요소(*) 중 name 속성 값이 "name-1"인 요소 글자 크기 */
+    /* 모든 요소(*) 중 속성명 name > 속성값 "name-1"인 요소 글자 크기 */
     /* * [name="name-1"] {font-size: 50px ;} */
 
     /* 모든 요소 선택자 생략 가능 */

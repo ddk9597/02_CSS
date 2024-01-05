@@ -70,9 +70,59 @@
 
     <hr>
     <h3>margin(여백, 다른 요소와의 간격)영역</h3>
+    
     <div class="box margin">내용(content)</div>
     
-    <div class="box">내용(content)</div>
+    <div class="box margin2">내용(content)</div> 
+        <pre>margin은 겹쳐질 수 있으며, 겹쳐진 경우 큰 값을 따른다</pre>
+        <!-- margin이 불연속하게 3개 이상 겹쳐진 경우는 어떻게 되는가? -->
+    
+    <hr>
+
+    <h1>padding, margin border(border-width)의 방향성</h1>
+    <pre>
+        상,하,좌,우를 모두 설정해 줄 수 있다
+        ( 000 == pading, margin, border를 나타냄 )
+
+        000-top      : 크기     -> 위쪽 방향 크기 지정
+        000-bottom   : 크기     -> 아래쪽 방향 크기 지정
+        000-left     : 크기     -> 왼쪽 방향 크기 지정
+        000-right    : 크기     -> 오른쪽 방향 크기 지정
+
+        단, border의 속성 값은[크기 모양 색상] 형식으로 작성 (border : 3px solid black ;)
+    </pre>
+
+    <div class="box" id="test1">content</div>
+
+    <hr>
+    <h1>padding, margin, border-width 크기 한번에 지정하기</h1>
+
+    <pre>
+        padding | margin | border-width : 속성 값(크기 px, %)
+        속성 값 1개 : 상하좌우 4방향 모두 지정
+        속성 값 2개 : 상하, 좌우 순으로 지정
+        속성 값 3개 : 상, 좌우, 하 순으로 지정( 벌레 머리가슴배 )
+        속성 값 4개 : 상, 우, 하, 좌 순으로 지정( 상 기준 시계방향 )
+    </pre>
+
+    <div class="box" id="test2">content</div>
+
+    <hr> 
+
+    <h2>margin: auto;</h2>
+
+    <pre>
+        다른 요소와의 간격을 자동으로 지정하여
+        가운데정렬하게 만드는 속성 값
+        - 기본적으로(보통)좌우 간격만 자동으로 지정
+        - 지정되는 대상은 block 형식의 요소여야 한다
+          (inline, inline-block 은 text-allign : center;를 이용)
+          (text-allign == 글자 정렬) 
+    </pre>
+
+    <div class="container">
+        <div class="box" id="test3">auto 테스트</div>
+    </div>
 
 
 </body>

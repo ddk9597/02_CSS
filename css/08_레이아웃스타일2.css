@@ -42,6 +42,42 @@
 .margin{
     /* 상하좌우 다른 요소(부모, 형제 요소)와 50px만큼 간격을 설정하는 것 */
     margin: 50px;
+}
 
+.margin2{
+    margin: 100px;
+}
 
+/* padding, border, margin의 방향성 */
+#test1{
+    padding-top: 10px;
+    padding-bottom:20px;
+    padding-left: 5px;
+    padding-right: 15px;
+
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    margin-right: 300px;
+
+    border-top: 5px solid red; /* solid : 실선 */
+    border-bottom: 10px dotted black ; /* dotted : 점선 */
+    border-left: 10px double green; /* 이중실선 */
+    border-right: 10px dashed purple; /* 긴 점선(절취선등) */    
+}
+#test2{
+    border: 1px solid black;
+}
+
+/* margin : auto ; 테스트 */
+.container{
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+    box-sizing : content-box
+}
+
+#test3{
+    margin: auto;
+    margin-top: 200px;
 }

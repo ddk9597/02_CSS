@@ -136,7 +136,7 @@ code{
 
         cursor: pointer; /* 마우스 포인터 모양을 손가락으로 바꾸는 것 */
 
-        border-radius: 20%;
+        border-radius: 20%; /* 모서리 곡률 50%:원 */
 
         user-select: none; /* 사용자가 선택을 못하게 함 */
     }

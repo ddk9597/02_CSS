@@ -10,11 +10,7 @@
 /* 전체 설정 */
 /* 완성 시 삭제 예정 */
 
- /* *{ 
-margin: 0;
-padding: 0;
-border: 1px solid black;
- } */
+
 
 a{
     color : black;
@@ -259,7 +255,9 @@ main{
 /* 카드 */
 
 .card-container{
-/* 카드 다 만들고 나서 설정하자 */
+    flex-wrap: wrap;  /* 내부 아이템이 칸을 넘어가면 다음 줄로 넘어가게 */
+    padding-left: 0; /* 좌 우 패딩을 없앤다 */
+    padding-right: 0; /* 좌 우 패딩을 없앤다 */
 }
 
 /* 카드를 감싸는 요소 */
@@ -285,8 +283,111 @@ main{
 .card-thumbnail{
     width: 100%;
     height: 100%;
+    /* transition : 요소의 변환 시간, 속도 등을 조절하는 속성 */
+    /* transition-duration : 요소 변환 시간만 조절하기 */
+    transition-duration: 0.25s ; /* 0.25초 동안 변환해라 */
 
     /* object-fit: 이미지 요소의 내용(진짜 이미지)의 크기를 조절 */
+
     /* object-fit: cover; */
+    /* cover : 이미지가 초과되는 부분을 안보이게 함 */
+    /* contain : 이미지 전체가 화면에 보여지도록 이미지 크기 조절 */
     object-fit: contain;
 }
+
+.card-content{
+    padding-top: 10px;
+    white-space: pre-wrap; /* 작성된 내용 그대로 나오게 해라. 텍스트 요소 공백 */
+}
+
+/* 카드에 호버링될 때 후손 이미지 태그에 크기를 확대하겠다 */
+
+.card:hover .card-thumbnail{
+    /* transform : 요소의 크기, 각도, 회전율 등을 변환/변형 */
+    /* scale(숫자) : 숫자만큼 요소의 크기를 변환(배율) */
+    /* width, height 조절로 안하는 이유 : 센터 기준이 아닌 중심 축 기준으로 커져서 어색함 */
+    transform: scale(1.1);
+}
+
+/* footer */
+/* footer */
+/* footer */
+footer{
+    /* 플렉스 컨테이너에 의해서 크기가 변형 되는 것을 방지 */
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    height: 200px;
+
+    /* rgab Red, Green, Blue, Alpha(투명도. 0.0~1.0)
+    
+     RGB 값은 0에 가까울 수록 어두운 색, 255에 가까울 수록 각 색상이 뚜렷해짐
+
+     A 값은 0에 가까울 수록 투명, 1에 가까울 수록 불투명함
+    */
+    background-color: rgba(210, 210, 255, 0.6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p{
+    font-weight: bold;
+    margin: 16px 0px;
+}
+
+footer span{
+    padding: 0 10px;
+}
+
+/* 사이드 메뉴 */
+/* 사이드 메뉴 */
+/* 사이드 메뉴 */
+
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 370px;
+
+    /* 화면에 고정시키기 */
+    position: fixed;
+
+    /* 고정되는 위치 설정 */
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%); /* y축 세로 위치를 조정 */
+    background-color: white;
+
+    /* 그림자 만들기 */
+    /* box-shadow: h-offset v-offset blur spread color inset; */
+    /* 개발자도구로 설정할 수도 있다 */
+    box-shadow: 0px 0px 5px 0px;
+}
+
+aside > a{
+    display: block; /* 크기조정 가능하게 */
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+}
+
+aside img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+/* 위로 이동 */
+.top-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    user-select: none;
+    color: grey;
+    font-weight: bold;
+  }

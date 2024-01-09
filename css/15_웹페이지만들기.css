@@ -1,0 +1,82 @@
+전역 요소 지정을 위한 가상 선택자
+/* :root -> 페이지 내부에서 공통으로 사용할 값을 변수로 선언 */
+/* 변수 : 값을 저장하는 것 */
+
+:root{
+    --main-color : gray;
+    /* --main-font-size : 20px; */
+}
+
+/* 전체 설정 */
+*{ 
+margin: 0;
+padding: 0;
+border: 1px solid black; /* 완성 시 삭제 예정 */
+}
+
+a{
+    color : black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;  /* 목록 각 리스트를 나타내는 표시 제거 */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    /* 화면 크기가 작아져도 유지 해야 할 최소 크기 */
+    min-width: 768px;  /* 최소 화면 너비 */
+    min-height: 100vh; /* 최소 화면 높이 100% : */
+}
+
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+font{font-family: GoryeongStrawberry
+}
+
+/* header css */
+header{
+    padding: 15px 0; /* 상하 좌우 */
+    border-bottom: 2px solid var(--main-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 70px;
+    width: 100%;
+
+    max-width: 1200px; /* 화면이 커져도 최대값은 1200px. width를 %로 설정했기 때문 */
+}
+
+.header-container > div {
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+/* header left 의 모든 후손 요소들의 스타일 적용 */
+.header-container-left *{
+    height: 100%;
+}
+
+/* header 오른 쪽 후손 a 태그 선택 */
+.header-container-right a{
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 0.8em ;      /* 0.8배 */
+    margin: 0 10px;
+}

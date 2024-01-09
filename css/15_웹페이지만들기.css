@@ -1,4 +1,4 @@
-전역 요소 지정을 위한 가상 선택자
+/* 전역 요소 지정을 위한 가상 선택자 */
 /* :root -> 페이지 내부에서 공통으로 사용할 값을 변수로 선언 */
 /* 변수 : 값을 저장하는 것 */
 
@@ -8,11 +8,13 @@
 }
 
 /* 전체 설정 */
-*{ 
+/* 완성 시 삭제 예정 */
+
+ /* *{ 
 margin: 0;
 padding: 0;
-border: 1px solid black; /* 완성 시 삭제 예정 */
-}
+border: 1px solid black;
+ } */
 
 a{
     color : black;
@@ -79,4 +81,105 @@ header{
     color: var(--main-color);
     font-size: 0.8em ;      /* 0.8배 */
     margin: 0 10px;
+}
+
+/* ----------------------------- */
+nav{
+    padding: 5px 10px;
+    border-bottom: 2px solid var(--main-color);
+
+    background-color: white;
+    position: sticky;
+    top:-1px;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar > li{
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar > li > a{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--main-color);
+    font-family: GoryeongStrawberry;
+
+    padding : 3px 20px ; /* 패딩을 넓혀서 클릭 범위 증가 */
+    width: 100%;        /* 클릭 범위 더 증가시키나 글자 정렬 문제 */
+    text-align: center;  /* 글자정렬 : 중앙 */
+}
+
+/* 마우스가 a 태그에 올라갔을 때 */
+.navbar > li > a:hover{ 
+    color: rgb(58, 2, 123);
+}
+
+/* 메뉴 사이 구분선 추가 */
+.navbar > li:not(:last-child) > a{
+    border-right: 2px solid var(--main-color);
+}
+
+
+
+
+
+/* main */
+/* main */
+/* main */
+/* main */
+
+main{
+    flex-grow: 1;
+}
+
+/* 베너 */
+/* 베너 */
+/* 베너 */
+.banner-container{
+    height: 550px;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+    /* 배경 이미지 추가 */
+    background-image: url(../images/banner1.png);
+
+
+    background-size: auto 145%;
+
+    /* 반복x  */
+    background-repeat: no-repeat;
+
+    /* 배경 위치 조정 */
+    background-position: center;
+}
+
+/* 배너 텍스트 */
+
+/* 배너 제목 */
+.banner-text > h1 {
+    margin-top: 200px;
+    font-size: 48px;
+    font-family: 'GoryeongStrawberry';
+}
+
+/* 배너 텍스트 */
+.banner-text > p{
+    margin: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
